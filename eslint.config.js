@@ -1,0 +1,113 @@
+import js from "@eslint/js";
+import globals from "globals";
+import { defineConfig } from "eslint/config";
+
+export default defineConfig([
+  {
+    files: ["src/**/*.{js,mjs,cjs}"],
+    plugins: { js },
+    extends: ["js/recommended"],
+    languageOptions: {
+      globals: globals.browser,
+    },
+    rules: {
+      semi: "error",
+      yoda: "error",
+      radix: "error",
+      "no-new": "error",
+      "no-eval": "error",
+      "new-cap": "error",
+      "no-caller": "error",
+      "no-console": "error",
+      "no-label-var": "error",
+      "no-lonely-if": "error",
+      "no-unused-vars": "error",
+      "no-script-url": "error",
+      "prefer-spread": "error",
+      "no-extra-label": "error",
+      "max-depth": ["error", 2], // 2 nested blocks
+      "prefer-template": "error",
+      "no-useless-call": "error",
+      "no-multi-assign": "error",
+      "no-invalid-this": "error",
+      "no-implied-eval": "error",
+      "no-return-assign": "error",
+      "no-throw-literal": "error",
+      "no-useless-concat": "error",
+      "no-param-reassign": "error",
+      "default-case-last": "error",
+      "no-nested-ternary": "error",
+      "no-useless-return": "error",
+      "prefer-rest-params": "error",
+      "no-unassigned-vars": "error",
+      "one-var": ["error", "never"],
+      "no-unneeded-ternary": "error",
+      "no-unreachable-loop": "error",
+      "prefer-object-spread": "error",
+      "no-implicit-coercion": "error",
+      "no-negated-condition": "error",
+      "no-object-constructor": "error",
+      "no-useless-assignment": "error",
+      "no-use-before-define": ["error"],
+      "no-useless-constructor": "error",
+      "require-atomic-updates": "error", // Discourage race condition with assignments using await or yield
+      "no-useless-computed-key": "error",
+      "func-style": ["error", "expression"],
+      "no-template-curly-in-string": "error",
+      "prefer-promise-reject-errors": "error",
+      "no-unmodified-loop-condition": "error",
+      "prefer-exponentiation-operator": "error",
+      "no-undef": ["error", { typeof: true }],
+      eqeqeq: ["error", "always", { null: "ignore" }],
+      "max-lines-per-function": ["error", { max: 60 }], // Max 60 lines for function
+      "prefer-const": ["error", { destructuring: "all" }],
+      "use-isnan": ["error", { enforceForIndexOf: true }],
+      "no-duplicate-imports": ["error", { includeExports: true }],
+      "valid-typeof": ["error", { requireStringLiterals: true }],
+      "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
+      "no-unused-expressions": ["error", { ignoreDirectives: true }],
+      "no-extra-boolean-cast": ["error", { enforceForInnerExpressions: true }],
+      "no-unsafe-negation": ["error", { enforceForOrderingRelations: true }],
+      "array-callback-return": [
+        "error",
+        { checkForEach: true, allowVoid: true },
+      ],
+      "no-inner-declarations": [
+        "error",
+        "both",
+        { blockScopedFunctions: "disallow" },
+      ],
+      "arrow-body-style": [
+        "error",
+        "as-needed",
+        { requireReturnForObjectLiteral: true },
+      ],
+      "dot-notation": [
+        "error",
+        { allowKeywords: false, allowPattern: "^[a-z]+(_[a-z]+)+$" },
+      ],
+      "prefer-destructuring": [
+        "error",
+        { object: true },
+        { enforceForRenamedProperties: true },
+      ],
+      "capitalized-comments": [
+        "error",
+        "always",
+        {
+          ignorePattern: "falls through",
+          ignoreInlineComments: true,
+          ignoreConsecutiveComments: true,
+        },
+      ],
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector: "SequenceExpression",
+          message:
+            "The comma operator is confusing and a common mistake. Don't use it!",
+        },
+      ],
+    },
+  },
+]);
