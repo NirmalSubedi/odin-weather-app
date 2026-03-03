@@ -1,6 +1,3 @@
-import "./styles.css";
-import * as logic from "./logic.js";
-import * as display from "./display.js";
-
-logic.logic();
-display.renderPage();
+import "./ui/styles.css";
+import { convertToCelsius } from "./logic/celsius-converter.js";
+convertToCelsius(10);

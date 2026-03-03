@@ -12,7 +12,7 @@ export default {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/template.html",
+      template: "./src/ui/template.html",
     }),
   ],
   module: {

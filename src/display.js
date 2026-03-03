@@ -1,3 +1,0 @@
-const renderPage = () => {};
-
-export { renderPage };

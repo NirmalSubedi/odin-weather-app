@@ -5,6 +5,6 @@ export default merge(common, {
   mode: "development",
   devtool: "inline-source-map",
   devServer: {
-    watchFiles: ["./src/template.html"],
+    watchFiles: ["./src/ui/template.html"],
   },
 });
