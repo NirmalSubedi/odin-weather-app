@@ -1,3 +1,4 @@
 import "./ui/styles.css";
-import { convertToCelsius } from "./logic/celsius-converter.js";
-convertToCelsius(10);
+export { convertToCelsius } from "./logic/celsius-converter.js";
+export { data } from "./logic/mock-data.js";
+export { getDays } from "./logic/get-days.js";
