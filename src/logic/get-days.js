@@ -13,16 +13,6 @@ const getDay = (datetimeEpoch) => {
 };
 
 // Returns 7 days starting from current day
-const getDays = () => {
-  const days = [];
-  const midpoint = Math.floor(data.days.length / 2);
-
-  const currentWeek = data.days.slice(0, midpoint);
-  currentWeek.forEach((day) => {
-    days.push(getDay(day.datetimeEpoch));
-  });
-
-  return days;
-};
+const getDays = () => data.days.map((day) => getDay(day.datetimeEpoch));
 
 export { getDays };

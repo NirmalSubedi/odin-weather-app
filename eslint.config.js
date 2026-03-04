@@ -10,6 +10,9 @@ export default defineConfig([
     languageOptions: {
       globals: globals.browser,
     },
+    linterOptions: {
+      reportUnusedInlineConfigs: "error",
+    },
     rules: {
       semi: "error",
       yoda: "error",
@@ -66,8 +69,9 @@ export default defineConfig([
       "valid-typeof": ["error", { requireStringLiterals: true }],
       "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
       "no-unused-expressions": ["error", { ignoreDirectives: true }],
-      "no-extra-boolean-cast": ["error", { enforceForInnerExpressions: true }],
+      "dot-notation": ["error", { allowPattern: "^[a-z]+(_[a-z]+)+$" }],
       "no-unsafe-negation": ["error", { enforceForOrderingRelations: true }],
+      "no-extra-boolean-cast": ["error", { enforceForInnerExpressions: true }],
       "array-callback-return": [
         "error",
         { checkForEach: true, allowVoid: true },
@@ -81,10 +85,6 @@ export default defineConfig([
         "error",
         "as-needed",
         { requireReturnForObjectLiteral: true },
-      ],
-      "dot-notation": [
-        "error",
-        { allowKeywords: false, allowPattern: "^[a-z]+(_[a-z]+)+$" },
       ],
       "prefer-destructuring": [
         "error",
