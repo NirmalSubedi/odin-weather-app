@@ -8,7 +8,6 @@ const processHoursData = (hours) =>
       windspeed,
       visibility,
       conditions,
-      icon,
     } = hour;
     return {
       datetime,
@@ -18,7 +17,6 @@ const processHoursData = (hours) =>
       windspeed,
       visibility,
       conditions,
-      icon,
     };
   });
 
@@ -26,9 +24,9 @@ const processDaysData = (data) => {
   const { resolvedAddress, days, tzoffset, alerts } = data;
 
   const daysData = days.map((day) => {
-    const { datetimeEpoch, tempmin, tempmax, conditions, icon, hours } = day;
+    const { datetimeEpoch, tempmin, tempmax, hours } = day;
     const hoursData = processHoursData(hours);
-    return { datetimeEpoch, tempmin, tempmax, conditions, icon, hoursData };
+    return { datetimeEpoch, tempmin, tempmax, hoursData };
   });
 
   return { resolvedAddress, tzoffset, alerts, daysData };
