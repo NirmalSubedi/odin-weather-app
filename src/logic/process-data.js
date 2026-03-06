@@ -1,7 +1,7 @@
 const processHoursData = (hours) =>
   hours.map((hour) => {
     const {
-      datetimeEpoch,
+      datetime,
       temp,
       precipprob,
       winddir,
@@ -11,7 +11,7 @@ const processHoursData = (hours) =>
       icon,
     } = hour;
     return {
-      datetimeEpoch,
+      datetime,
       temp,
       precipprob,
       winddir,

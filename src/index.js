@@ -5,3 +5,4 @@ export { getDays } from "./logic/get-days.js";
 export { handleError } from "./logic/error-handler.js";
 export { processDaysData } from "./logic/process-data.js";
 export { fetchData } from "./logic/fetch-data.js";
+export { getLatestHourData } from "./logic/get-latest-hour.js";

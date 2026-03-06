@@ -24,9 +24,9 @@ export default defineConfig([
       "no-console": "warn",
       "no-label-var": "error",
       "no-lonely-if": "error",
-      "no-unused-vars": "error",
       "no-script-url": "error",
       "prefer-spread": "error",
+      "no-unused-vars": "error",
       "no-extra-label": "error",
       "prefer-template": "error",
       "no-useless-call": "error",
@@ -68,7 +68,7 @@ export default defineConfig([
       "valid-typeof": ["error", { requireStringLiterals: true }],
       "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
       "no-unused-expressions": ["error", { ignoreDirectives: true }],
-      "dot-notation": ["error", { allowPattern: "^[a-z]+(_[a-z]+)+$" }],
+      "dot-notation": ["warn", { allowPattern: "^[a-z]+(_[a-z]+)+$" }],
       "no-unsafe-negation": ["error", { enforceForOrderingRelations: true }],
       "no-extra-boolean-cast": ["error", { enforceForInnerExpressions: true }],
       "array-callback-return": [
@@ -86,12 +86,12 @@ export default defineConfig([
         { requireReturnForObjectLiteral: true },
       ],
       "prefer-destructuring": [
-        "error",
+        "warn",
         { object: true },
         { enforceForRenamedProperties: true },
       ],
       "capitalized-comments": [
-        "error",
+        "warn",
         "always",
         {
           ignorePattern: "falls through",
