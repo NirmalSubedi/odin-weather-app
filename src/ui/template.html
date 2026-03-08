@@ -8,25 +8,18 @@
 
   <body>
     <form method="dialog">
-      <div>
-        <img
-          src="./images/search.svg"
-          alt="search icon"
-          width="24"
-          height="24"
-        />
-        <input
-          type="search"
-          id="location-search"
-          name="location-search"
-          class="location-search"
-          placeholder="Search for a location..."
-        />
-      </div>
+      <img src="./images/search.svg" alt="search icon" width="24" height="24" />
+      <input
+        type="search"
+        id="location-search"
+        name="location-search"
+        class="location-search"
+        placeholder="Search for a location..."
+      />
       <button type="submit" class="search-button">Search</button>
     </form>
-    <div class="warnings active">
-      <div class="alerts hidden">
+    <div class="warnings hidden">
+      <div class="alerts active">
         <img src="./images/alert.svg" alt="alert icon" width="24" height="24" />
         <p class="headline">Severe Thunderstorm Warning</p>
         <p class="description">
@@ -34,7 +27,8 @@
           area. Take precautions and stay indoors.
         </p>
       </div>
-      <div class="errors hidden">
+
+      <div class="errors active">
         <img src="./images/error.svg" alt="error icon" width="24" height="24" />
         <p class="headline">Error</p>
         <p class="description">
@@ -43,6 +37,33 @@
         </p>
       </div>
     </div>
+
+    <div class="introduction hidden">
+      <img
+        class="logo"
+        src="./images/cloud.svg"
+        alt="cloud logo"
+        width="24"
+        height="24"
+      />
+      <h3 class="app-name">Weather Search</h3>
+      <p class="description">
+        Search for any location to get detailed weather information including
+        temperature, wind conditions, visibility, and weather alerts.
+      </p>
+      <p class="instruction">
+        <img
+          class="search-icon"
+          src="./images/search.svg"
+          alt="search icon"
+          width="24"
+          height="24"
+        /><span class="text"
+          >Start by entering a city name or location above</span
+        >
+      </p>
+    </div>
+
     <div class="weather">
       <div class="temperature-toggle">
         <input
@@ -50,14 +71,14 @@
           name="temperature-unit"
           id="unit-fahrenheit"
           checked
-        /><label for="unit-fahrenheit">°F</label>
-        <input type="radio" name="temperature-unit" id="unit-celsius" /><label
-          for="unit-celsius"
-          >°C</label
-        >
+        />
+        <label for="unit-fahrenheit" tabindex="0">°F</label>
+        <input type="radio" name="temperature-unit" id="unit-celsius" />
+        <label for="unit-celsius" tabindex="0">°C</label>
       </div>
+
       <div class="primary-info">
-        <h2 class="location">Searched Location</h2>
+        <h2 class="location">London</h2>
         <h1 class="temperature">50°F</h1>
         <p class="description">Overcast Clouds</p>
         <div class="range-temperature">
@@ -67,7 +88,7 @@
               alt="low temp icon"
               width="24"
               height="24"
-            />30°F</span
+            />Min: 30°F</span
           >
           <span class="max-temp"
             ><img
@@ -75,10 +96,11 @@
               alt="high temp icon"
               width="24"
               height="24"
-            />73°F</span
+            />Max: 73°F</span
           >
         </div>
       </div>
+
       <div class="secondary-info">
         <div class="wind-section">
           <img
@@ -108,32 +130,6 @@
           <p class="info">45%</p>
         </div>
       </div>
-    </div>
-
-    <div class="introduction hidden">
-      <img
-        class="logo"
-        src="./images/cloud.svg"
-        alt="cloud logo"
-        width="24"
-        height="24"
-      />
-      <h2 class="app-name">Weather Search</h2>
-      <p class="description">
-        Search for any location to get detailed weather information including
-        temperature, wind conditions, visibility, and weather alerts.
-      </p>
-      <p class="instruction">
-        <img
-          class="search-icon"
-          src="./images/search.svg"
-          alt="search icon"
-          width="24"
-          height="24"
-        /><span class="text"
-          >Start by entering a city name or location above</span
-        >
-      </p>
     </div>
   </body>
 </html>
