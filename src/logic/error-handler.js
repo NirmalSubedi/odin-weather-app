@@ -1,6 +1,11 @@
+import { showError } from "../index.js";
+
 const handleError =
   (fn) =>
   (...params) =>
-    fn(...params).catch(console.error); // eslint-disable-line no-console
+    fn(...params).catch((error) => {
+      showError(error);
+      console.error(error);
+    });
 
 export { handleError };
