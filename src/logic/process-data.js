@@ -21,6 +21,7 @@ const processHoursData = (hours) =>
   });
 
 const processDaysData = (data) => {
+  if (!data) return;
   const { resolvedAddress, days, tzoffset, alerts } = data;
 
   const daysData = days.map((day) => {
@@ -29,7 +30,9 @@ const processDaysData = (data) => {
     return { datetimeEpoch, tempmin, tempmax, hoursData };
   });
 
-  return { resolvedAddress, tzoffset, alerts, daysData };
+  const [currentDay] = daysData;
+
+  return { resolvedAddress, tzoffset, alerts, currentDay };
 };
 
 export { processDaysData };

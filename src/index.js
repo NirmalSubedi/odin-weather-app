@@ -6,3 +6,6 @@ export { handleError } from "./logic/error-handler.js";
 export { processDaysData } from "./logic/process-data.js";
 export { fetchData } from "./logic/fetch-data.js";
 export { getLatestHourData } from "./logic/get-latest-hour.js";
+export { getInput } from "./ui/get-input.js";
+export { requestWeatherInfo } from "./ui/request-weather-info.js";
+export { showError, hideError } from "./ui/display-error.js";
