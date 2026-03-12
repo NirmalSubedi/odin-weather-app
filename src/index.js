@@ -9,3 +9,4 @@ export { getLatestHourData } from "./logic/get-latest-hour.js";
 export { getInput } from "./ui/get-input.js";
 export { requestWeatherInfo } from "./ui/request-weather-info.js";
 export { showError, hideError } from "./ui/display-error.js";
+export { getCardinalDirection } from "./logic/get-cardinal-direction.js";
