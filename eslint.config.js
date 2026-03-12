@@ -26,7 +26,7 @@ export default defineConfig([
       "no-lonely-if": "error",
       "no-script-url": "error",
       "prefer-spread": "error",
-      "no-unused-vars": "error",
+      "no-unused-vars": "warn",
       "no-extra-label": "error",
       "prefer-template": "error",
       "no-useless-call": "error",

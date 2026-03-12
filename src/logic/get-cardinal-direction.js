@@ -1,5 +1,5 @@
 const getCardinalDirection = (winddir) => {
-  switch (winddir) {
+  switch (true) {
     case winddir > 337.5 || winddir < 22.5:
       return "N";
     case winddir > 22.5 && winddir < 67.5:

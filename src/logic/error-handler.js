@@ -7,7 +7,7 @@ const handleError =
       console.error(error);
       if (error.message === "Request did not match an endpoint.") {
         error.name = "Location not found";
-        error.message = "Please enter a valid location.";
+        error.message = `Location not found. Try searching for: London, New York, Tokyo, Miami, or Paris.`;
       }
       showError(error);
     });
