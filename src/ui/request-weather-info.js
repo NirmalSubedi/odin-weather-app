@@ -1,4 +1,10 @@
-import { getInput, fetchData, hideError, processDaysData } from "../index.js";
+import {
+  getInput,
+  fetchData,
+  hideError,
+  processDaysData,
+  updateQueryData,
+} from "../index.js";
 
 const [searchElement, searchButton] = document.body.querySelectorAll(
   ".location-search, .search-button"
@@ -12,6 +18,7 @@ const requestWeatherInfo = async () => {
   const value = getInput();
   let data = await fetchData(value);
   data = processDaysData(data);
+  updateQueryData(data);
 
   searchElement.removeAttribute("disabled");
   searchButton.removeAttribute("disabled");
