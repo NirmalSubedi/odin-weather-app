@@ -1,41 +1,43 @@
-const getCardinalDirection = (winddir) => {
+const getCardinalDirection = (direction) => {
+  const dir = Math.round(direction * 10) / 10;
+  // Direction range from 0 to 360 degree
   switch (true) {
-    case winddir > 337.5 || winddir < 22.5:
+    case dir > 337.5 || dir < 22.5:
       return "N";
-    case winddir > 22.5 && winddir < 67.5:
+    case dir > 22.5 && dir < 67.5:
       return "NE";
-    case winddir > 67.5 && winddir < 112.5:
+    case dir > 67.5 && dir < 112.5:
       return "E";
-    case winddir > 112.5 && winddir < 157.5:
+    case dir > 112.5 && dir < 157.5:
       return "SE";
-    case winddir > 157.5 && winddir < 202.5:
+    case dir > 157.5 && dir < 202.5:
       return "S";
-    case winddir > 202.5 && winddir < 247.5:
+    case dir > 202.5 && dir < 247.5:
       return "SW";
-    case winddir > 247.5 && winddir < 292.5:
+    case dir > 247.5 && dir < 292.5:
       return "W";
-    case winddir > 337.5 && winddir < 22.5:
+    case dir > 292.5 && dir < 337.5:
       return "NW";
 
-    case winddir === 22.5:
+    case dir === 22.5:
       return "NNE";
-    case winddir === 67.5:
+    case dir === 67.5:
       return "ENE";
-    case winddir === 112.5:
+    case dir === 112.5:
       return "ESE";
-    case winddir === 157.5:
+    case dir === 157.5:
       return "SSE";
-    case winddir === 202.5:
+    case dir === 202.5:
       return "SSW";
-    case winddir === 247.5:
+    case dir === 247.5:
       return "WSW";
-    case winddir === 292.5:
+    case dir === 292.5:
       return "WNW";
-    case winddir === 337.5:
+    case dir === 337.5:
       return "NNW";
 
     default:
-      return "Unknown";
+      return "";
   }
 };
 
