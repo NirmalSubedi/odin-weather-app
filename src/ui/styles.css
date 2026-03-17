@@ -384,7 +384,7 @@ form .search-button:disabled {
 .secondary-info {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
-  gap: 0 var(--sp-lg);
+  gap: var(--sp-lg);
   margin-top: var(--sp-2xlg);
   border-top: 1px solid var(--clr-gray-900);
   padding-top: var(--sp-lg);
