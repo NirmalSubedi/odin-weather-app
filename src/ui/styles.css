@@ -6,7 +6,8 @@
   --clr-text: hsl(243, 76%, 5%);
   --clr-bg: hsl(240, 60%, 99%);
 
-  --clr-warn: hsl(0, 100%, 41%);
+  --clr-error: hsl(0, 100%, 41%);
+  --clr-alert: hsl(59, 100%, 42%);
 
   --clr-min-temp: hsl(240, 70%, 50%);
   --clr-max-temp: hsl(0, 70%, 50%);
@@ -228,14 +229,23 @@ form .search-button:disabled {
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: var(--sp-sm);
-  padding: var(--sp-sm);
+  padding: var(--sp-md);
   margin-top: var(--sp-md);
 
-  background:
-    linear-gradient(hsla(0, 100%, 50%, 0.047)), linear-gradient(var(--clr-bg));
-  color: var(--clr-warn);
   border-radius: var(--sp-sm);
   border: 1px solid var(--clr-gray-700);
+}
+
+.warnings .alerts {
+  background:
+    linear-gradient(hsla(59, 100%, 50%, 0.4)), linear-gradient(var(--clr-bg));
+  color: var(--clr-text);
+}
+
+.warnings .errors {
+  background:
+    linear-gradient(hsla(0, 100%, 50%, 0.047)), linear-gradient(var(--clr-bg));
+  color: var(--clr-error);
 }
 
 .warnings > * > img {
@@ -306,6 +316,7 @@ form .search-button:disabled {
 .temperature-toggle input {
   appearance: none;
   visibility: hidden;
+  display: none;
   overflow: none;
 }
 
