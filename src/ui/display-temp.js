@@ -30,6 +30,4 @@ const displayTemp = () => {
   }
 };
 
-temperatureToggle.addEventListener("change", displayTemp);
-
 export { displayTemp };
