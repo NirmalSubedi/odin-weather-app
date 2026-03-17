@@ -5,6 +5,7 @@ import {
   displayTemp,
   displayAlert,
   updateQueryData,
+  formatAddress,
 } from "../index.js";
 
 const [introduction, weather] = document.body.querySelectorAll(
@@ -35,7 +36,7 @@ const displayInformation = async () => {
   weather.classList.remove("hidden");
   displayAlert();
   displayTemp();
-  location.textContent = resolvedAddress;
+  location.textContent = formatAddress(resolvedAddress);
   description.textContent = conditions;
   windInfo.textContent = `${windspeed} mph ${getCardinalDirection(winddir)}`;
   visibilityInfo.textContent = `${visibility} mi`;
