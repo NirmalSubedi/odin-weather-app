@@ -5,7 +5,9 @@ const primaryInfoContainer = document.body.querySelector(
   ".weather .primary-info"
 );
 const [temperature, minimumTemp, maximumTemp] =
-  primaryInfoContainer.querySelectorAll(".temperature, .min-temp, .max-temp");
+  primaryInfoContainer.querySelectorAll(
+    ".temperature, .min-temp span, .max-temp span"
+  );
 
 const displayTemp = () => {
   const element = temperatureToggle.querySelector("input[type=radio]:checked");

@@ -358,12 +358,13 @@ form .search-button:disabled {
 .primary-info .min-temp,
 .primary-info .max-temp {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: max-content max-content;
   gap: var(--sp-2xsm);
 }
 
 .primary-info .min-temp {
   color: var(--clr-min-temp);
+  justify-self: end;
 }
 .primary-info .max-temp {
   color: var(--clr-max-temp);
