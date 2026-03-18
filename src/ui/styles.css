@@ -204,6 +204,7 @@ form .search-button {
   grid-area: button;
   padding: 0.25em 2em;
   align-self: center;
+  white-space: pre;
 
   border-radius: var(--sp-xsm);
   background: var(--clr-text);
@@ -225,12 +226,17 @@ form .search-button:disabled {
   opacity: 0.5;
 }
 
+.warnings {
+  justify-self: center;
+}
+
 .warnings > * {
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: var(--sp-sm);
   padding: var(--sp-md);
   margin-top: var(--sp-md);
+  width: clamp(40ch, 70vw, 100ch);
 
   border-radius: var(--sp-sm);
   border: 1px solid var(--clr-gray-700);

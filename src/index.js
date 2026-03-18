@@ -16,5 +16,6 @@ export { displayInformation } from "./ui/display-info.js";
 export { displayTemp } from "./ui/display-temp.js";
 export { displayAlert } from "./ui/display-alert.js";
 export { formatAddress } from "./ui/format-address.js";
+export { displayLoading } from "./ui/display-loading.js";
 
 import "./ui/events.js";
